@@ -14,7 +14,7 @@ public class Radiator {
 
     protected String type;
 
-    public Radiator() {
+    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String type) {
         this.powerInWatts = powerInWatts;
         this.color = color;
         this.producer = producer;
@@ -22,20 +22,14 @@ public class Radiator {
         this.weightInGrams = weightInGrams;
         this.type = type;
     }
-    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String type) {
-        this(powerInWatts, color, producer, distanceInMillimeters, weightInGrams, GOOD_RADIATOR);
+
+    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams) {
+        this(powerInWatts, color, producer, distanceInMillimeters, weightInGrams, "GOOD_RADIATOR");
+
     }
 
-    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String type) {
+    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters) {
         this(powerInWatts, color, producer, distanceInMillimeters, 0);
-    }
-
-    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String goodRadiator) {
-
-    }
-
-    public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String goodRadiator) {
-
     }
 
     public int getPowerInWatts() {
@@ -98,3 +92,4 @@ public class Radiator {
                 '}';
     }
 }
+
