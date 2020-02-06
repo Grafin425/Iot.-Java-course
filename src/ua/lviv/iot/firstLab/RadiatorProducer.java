@@ -9,7 +9,7 @@ public class RadiatorProducer {
         System.out.println(secondRadiator);
         System.out.println(thirdRadiator);
 
-        Radiator.setMaterial("aluminum");       
+        Radiator.setMaterial("aluminum");
 
         System.out.println("***After Static is Set***");
         System.out.println(firstRadiator);
