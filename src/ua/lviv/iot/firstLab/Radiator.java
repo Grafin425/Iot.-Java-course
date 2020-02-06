@@ -12,6 +12,8 @@ public class Radiator {
 
     protected int weightInGrams;
 
+    private static String material;
+
     protected String type;
 
     public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String type) {
@@ -79,6 +81,9 @@ public class Radiator {
     public void setType(String type) {
         this.type = type;
     }
+    public static void setMaterial (String material){
+        Radiator.material= material;
+    }
 
     @Override
     public String toString() {
@@ -89,7 +94,8 @@ public class Radiator {
                 ", distanceInMillimeters=" + distanceInMillimeters +
                 ", weightInGrams=" + weightInGrams +
                 ", type='" + type + '\'' +
+                ", ***Static material "+
+                Radiator.material +
                 '}';
     }
 }
-
