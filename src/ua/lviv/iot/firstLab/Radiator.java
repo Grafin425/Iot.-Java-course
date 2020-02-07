@@ -1,7 +1,11 @@
 package ua.lviv.iot.firstLab;
 
 public class Radiator {
+
     public static final String GOOD_RADIATOR = "very good radiator";
+
+    static int numberOfParts;
+
     private int powerInWatts;
 
     private String color;
@@ -15,6 +19,10 @@ public class Radiator {
     private static String material;
 
     protected String type;
+
+    public Radiator (){
+        this(0,"Unknown","Unknown",0,0,"Unknown");
+    }
 
     public Radiator(int powerInWatts, String color, String producer, int distanceInMillimeters, int weightInGrams, String type) {
         this.powerInWatts = powerInWatts;
@@ -98,4 +106,20 @@ public class Radiator {
                 Radiator.material +
                 '}';
     }
+    public static String printStaticNumbOfMembers() {
+        return "numberOfMembers ( it`s a static ):" + numberOfParts;
+    }
+
+    public String printNumbOfMembers() {
+        return "numberOfMembers ( it isn`t a static ) :" + numberOfParts;
+    }
+    public void resertValues(int powerInWatts,String color,String producer, int distanceInMillimeters,int weightInGrams,String type){
+        this.powerInWatts= powerInWatts;
+        this.color=color;
+        this.producer=producer;
+        this.distanceInMillimeters=distanceInMillimeters;
+        this.weightInGrams=weightInGrams;
+        this.type=type;
+    }
+
 }
