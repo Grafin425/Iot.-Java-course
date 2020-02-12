@@ -103,7 +103,7 @@ public class Radiator {
                 ", weightInGrams=" + weightInGrams +
                 ", type='" + type + '\'' +
                 ", ***Static material "+
-                Radiator.material +
+                Radiator.material + Radiator.printStaticNumbOfMembers() +
                 '}';
     }
     public static String printStaticNumbOfMembers() {
