@@ -17,7 +17,19 @@ public class RadiatorProducer {
         System.out.println(firstRadiator);
         System.out.println(secondRadiator);
         System.out.println(thirdRadiator);
+
+        Radiator cycleRadiator = null;
+        Radiator arrayOfRadiator[]= new Radiator[4];
+
+        int iterator=0;
+        while (iterator<4) {
+           arrayOfRadiator[iterator]= new Radiator();
+           System.out.println("Radiator"+ iterator);
+           System.out.println(arrayOfRadiator[iterator]);
+           iterator++;
+        }
     }
+
 
 
 
